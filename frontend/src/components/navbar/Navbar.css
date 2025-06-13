@@ -1,0 +1,161 @@
+nav {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1280px;
+  height: auto;
+  border-bottom: 1px solid #eaeaea;
+  background: #ffffff;
+  padding: 16px 24px;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; 
+  margin: 0 auto;
+  max-width: 1139px;
+  width: 100%;
+}
+
+.nav-wrapper a {
+  height: 40px;
+}
+
+.nav-wrapper .logo {
+  padding-left: 2.5em;
+width: 78px;
+height: 29px;
+top: 31.71px;
+font-style: normal;
+font-weight: 600;
+font-size: 23.8279px;
+line-height: 29px;
+letter-spacing: -0.075em;
+
+color: #000000;
+
+
+}
+
+.nav-wrapper .logo img {
+  background-color: #ffffff;
+  position: absolute;
+  width: 25.44px;
+  height: 25.92px;
+  left: 80px;
+  top: 26px;
+  box-shadow: 0px 3.45px 25.88px 0px #00000017;
+
+
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 106px;
+  padding: 8px 0;
+}
+
+.nav-links ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 16px;
+}
+
+.nav-links li {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 36px;
+  text-align: center;
+  color: #707070;
+  position: relative;
+}
+
+.nav-links li::after {
+  content: "|";
+  display: inline-block;
+  margin-left: 8px;
+  color: #d0d0d0;
+}
+
+.nav-links li:last-child::after {
+  content: "";
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.hamburger img {
+  width: 24px;
+  height: 24px;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    position: absolute;
+    right: 24px;
+    top: 24px;
+  }
+
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    padding: 16px 0;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    gap: 12px;
+    padding: 0;
+  }
+
+  .nav-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .nav-links li {
+    width: 360px;
+    height: 36px;
+    border: 1px solid #eaeaea;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    padding: 0;
+  }
+
+  .nav-links li a {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-decoration: none;
+    padding-left: 20px;
+    width: 100%;
+    text-align: left;
+    display: block;
+  }
+
+  .nav-links li::after {
+    content: "";
+  }
+}
