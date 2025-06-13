@@ -1,10 +1,24 @@
-import React from 'react'
-import './Hero.css'
+import React from "react";
+import "./Hero.css";
 
 const Hero = () => {
   return (
-    <div>hero</div>
-  )
-}
+    <header>
+      <div className="wrapper">
+        <div className="hero-content">
+          <p className="main-txt">
+            Book an appointment with <br />
+            <span className="highlight-lifestyle">lifestyle medicine </span>
+            <span className="highlight-experts">experts</span>
+          </p>
 
-export default Hero
+          <div className="sub-txt">
+            <p>Optimize your lifestyle and reverse chronic diseases.</p>
+          </div>
+        </div>
+      </div>
+    </header>
+  );
+};
+
+export default Hero;
