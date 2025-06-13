@@ -1,0 +1,28 @@
+:root {
+    --darkGrey: #707070;
+    --lightGrey: #D0D0D0;
+    --blueGradient: linear-gradient(93.31deg, #1173B3 -34.01%, #0CB9B3 69.91%);
+    --pinkGradient: linear-gradient(282.8deg, #F0C971 11.7%, #E5688C 63.17%);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #FFFFFF;
+}
+
+.wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
