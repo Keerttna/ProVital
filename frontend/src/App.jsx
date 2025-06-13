@@ -1,9 +1,15 @@
-import React from 'react'
+import React from "react";
+import "./App.css";
+import Hero from "./components/hero/Hero";
+import Lifestyle from "./components/lifestyle/Lifestyle";
 
 const App = () => {
   return (
-    <div>App</div>
-  )
-}
+    <>
+      <Hero />
+      <Lifestyle />
+    </>
+  );
+};
 
-export default App
+export default App;
