@@ -3,13 +3,37 @@ header {
   margin: 0;
 }
 
+header .gradient-box-1 {
+
+position: absolute;
+width: 227px;
+height: 222px;
+left: 1021px;
+top: -8px;
+
+background: rgba(207, 225, 240, 0.44);
+filter: blur(75px);
+
+}
+
 header .wrapper {
   position: relative;
   height: 100vh;
 }
 
-header .hero-content {
+.wrapper .gradient-box-2 {
   position: absolute;
+width: 318px;
+height: 313px;
+left: 347px;
+top: 301px;
+
+background: rgba(251, 241, 220, 0.96);
+filter: blur(75px);
+}
+
+header .hero-content {
+  position: relative;
   top: 214px;
   left: 650px;
   width: 599px;
