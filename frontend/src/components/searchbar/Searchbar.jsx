@@ -1,8 +1,9 @@
 import React from "react";
 import "./SearchBar.css";
-import searchIcon from "../../assets/search-bar/search-icon.png";
-import locationIcon from "../../assets/search-bar/location-icon.png";
-import insuranceIcon from "../../assets/search-bar/insurance-icon.png"; 
+import searchIcon from "../../assets/search-bar/search-icon.svg";
+import locationIcon from "../../assets/search-bar/location-icon.svg";
+import insuranceIcon from "../../assets/search-bar/health-card.svg";
+import findIcon from "../../assets/search-bar/find-icon.svg";
 
 const SearchBar = () => {
   return (
@@ -14,7 +15,7 @@ const SearchBar = () => {
 
       <div className="input-group">
         <img src={locationIcon} alt="icon" className="input-icon" />
-        <input type="text" placeholder="Location" />
+        <input type="text" placeholder="City, state, or zipcode" />
       </div>
 
       <div className="input-group">
@@ -22,7 +23,10 @@ const SearchBar = () => {
         <input type="text" placeholder="Insurance carrier" />
       </div>
 
-      <button className="find-button">Find</button>
+      <button className="find-button">
+        <img src={findIcon} alt="search" className="button-icon" />
+        Find now
+      </button>
     </div>
   );
 };

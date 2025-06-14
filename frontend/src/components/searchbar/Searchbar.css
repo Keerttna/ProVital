@@ -1,0 +1,92 @@
+.search-box {
+  position: absolute;
+  top: 444px;
+  left: 120px;
+  width: 1080px;
+  height: 92px;
+  border: 1px solid #e7e7e7;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 0 24px;
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 31px rgba(0, 0, 0, 0.12));
+  border-radius: 14px;
+}
+
+.input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  height: 60px;
+  border: 1px solid #e7e7e7;
+  background-color: #f9f9f9;
+  padding-left: 36px;
+  padding-right: 16px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  min-width: 0;
+}
+
+.input-group:first-child {
+  flex: 1.5; 
+}
+
+
+.input-group :placeholder-shown {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #8b8e9c;
+}
+
+.input-group .input-icon {
+  position: absolute;
+  left: 12px;
+  width: 24px;
+  height: 24px;
+}
+
+.input-group input {
+  padding-left: 16px;
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  outline: none;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.find-button {
+  position: relative;
+  width: 157px;
+  height: 60px;
+  box-sizing: border-box;
+  padding: 0 16px;
+  background: linear-gradient(271.76deg, #4683d0 17.7%, #7cd0a2 145.75%);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  gap: 8px;
+}
+
+.find-button .button-icon {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+}
