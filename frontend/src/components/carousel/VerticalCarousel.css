@@ -83,6 +83,7 @@
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
   margin-top: 175px;
+  margin-bottom: 0px;
 }
 
 .horizontal-image {
@@ -93,5 +94,6 @@
   background-position: center;
   border-radius: 16px;
   scroll-snap-align: start;
+  margin-bottom: 0px;
 }
 

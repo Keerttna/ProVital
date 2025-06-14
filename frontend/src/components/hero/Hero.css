@@ -172,6 +172,9 @@ header .hero-content {
 
 /* Mobile: reverse visibility */
 @media (max-width: 768px) {
+  .header {
+    padding-bottom: 0;
+  }
   .desktop-carousel {
     display: none;
   }
@@ -179,6 +182,9 @@ header .hero-content {
   .mobile-carousel {
     display: block;
     padding: 24px 16px 0 16px;
+    padding-bottom: 0px;
+    margin-bottom: 0;
+    height: 600px;
   }
 
   .mobile-carousel .vertical-carousel-wrapper {
