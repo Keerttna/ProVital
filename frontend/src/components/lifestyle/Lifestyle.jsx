@@ -1,5 +1,6 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "./Lifestyle.css";
+
 import nutritionImg from "../../assets/lifestyle-section/nutrition.png";
 import physicalImg from "../../assets/lifestyle-section/physical-activity.png";
 import sleepImg from "../../assets/lifestyle-section/sleep.png";
@@ -82,7 +83,8 @@ const Lifestyle = () => {
   const carouselRef = useRef(null);
 
   const scrollToIndex = (index) => {
-    const cardWidth = carouselRef.current?.children[0]?.offsetWidth || 0;
+    if (!carouselRef.current) return;
+    const cardWidth = carouselRef.current.children[0]?.offsetWidth || 0;
     carouselRef.current.scrollTo({
       left: index * cardWidth,
       behavior: "smooth",
@@ -100,6 +102,21 @@ const Lifestyle = () => {
     scrollToIndex(newIndex);
   };
 
+  useEffect(() => {
+    const isMobile = window.innerWidth <= 768;
+    if (!isMobile) return;
+
+    const interval = setInterval(() => {
+      setActiveIndex((prevIndex) => {
+        const newIndex = (prevIndex + 1) % content.length;
+        scrollToIndex(newIndex);
+        return newIndex;
+      });
+    }, 3500); // scroll every 3.5s
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="lifestyle-section">
       <div className="gradient-box"></div>
@@ -111,10 +128,10 @@ const Lifestyle = () => {
         </h2>
         <div className="nav-buttons">
           <button onClick={handlePrev}>
-            <img src={leftArr} alt="&larr;" />
+            <img src={leftArr} alt="←" />
           </button>
           <button onClick={handleNext}>
-            <img src={rightArr} alt="&rarr;" />
+            <img src={rightArr} alt="→" />
           </button>
         </div>
       </div>

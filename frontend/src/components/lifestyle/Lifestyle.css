@@ -106,8 +106,7 @@
   display: none;
 }
 
-.carousel-card {
-  flex: 0 0 47%;
+.carousel-card {  flex: 0 0 47%;
   max-width: 493px;
 
   height: 485px;
@@ -118,6 +117,8 @@
   flex-direction: column;
   overflow: hidden;
   position: relative;
+  scroll-snap-align: start;
+  min-width: 282px; 
 }
 
 .card-image-wrapper {
@@ -183,4 +184,122 @@
   line-height: 24px;
   color: #919191;
   margin: 0;
+}
+
+@media (max-width: 768px) {
+  .lifestyle-section {
+    padding: 0px 20px;
+  }
+
+  .section-label {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 4px;
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+    margin: 0;
+  }
+
+  .section-header h2 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    color: #000;
+    line-height: 133%;
+  }
+
+  .section-header h2 span {
+    font-weight: 600;
+    font-size: 20px;
+    font-style: italic;
+    background: linear-gradient(289.5deg, #f1ca72 27.25%, #d96e6c 92.08%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    padding-bottom: 30px;
+  }
+
+  .nav-buttons {
+    display: none;
+  }
+
+  .labels-container {
+    display: none;
+  }
+
+   .card {
+    width: 282px;
+    height: 255px;
+    border-radius: 10px;
+  }
+
+  .card-image {
+    height: 255px;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .card-label {
+    bottom: 20px;
+    left: 12px;
+    padding: 5px 10px;
+    font-size: 13.09px;
+  }
+
+  .card-label img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .label-highlight {
+  font-weight: 500;
+  font-size: 11.64px;
+  line-height: 100%;
+  letter-spacing: 0;
+  color: #919191;
+}
+
+  .card-text {
+    padding: 16px;
+    gap: 10px;
+  }
+
+  .card-text h4 {
+    font-size: 16px;
+  }
+
+  .card-text p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+.carousel-card {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  width: 493px;
+  margin-right: 20px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0px 3.4px 26.26px rgba(0, 0, 0, 0.12);
+}
+
+@media (max-width: 768px) {
+  .carousel-card {
+    width: 282px;
+    margin-right: 16px;
+  display: flex;
+  overflow-x: auto;
+  gap: 16px;
+  padding: 16px 0;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 0px;
+}
 }
