@@ -6,7 +6,7 @@
   padding-right: 0px;
 }
 
- .gradient-box {
+.gradient-box {
   position: absolute;
   width: 250px;
   height: 246px;
@@ -59,10 +59,9 @@
   cursor: pointer;
   display: flex;
   align-items: center;
-  margin-left: 10px; 
+  margin-left: 10px;
   z-index: 1;
 }
-
 
 .labels-container {
   display: flex;
@@ -145,6 +144,25 @@
   font-size: 16px;
   font-weight: 500;
   color: #000;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.label-highlight {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0;
+  color: #919191;
+}
+
+.card-label img {
+  width: 25;
+  height: 23;
+  margin-right: 10px;
+  gap: 4px;
 }
 
 .card-text {
