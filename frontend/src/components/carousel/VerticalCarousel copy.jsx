@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import "./VerticalCarousel.css";
 
 import left1 from "../../assets/vertical-carousel/left-1.png";
@@ -15,37 +15,11 @@ const leftImages = [left1, left2, left3, left4];
 const rightImages = [right1, right2, right3, right4];
 
 const VerticalCarousel = ({ direction = "vertical" }) => {
-  const scrollRef = useRef(null);
-
-  useEffect(() => {
-    if (direction !== "horizontal") return;
-
-    const container = scrollRef.current;
-    let scrollAmount = 0;
-    const scrollStep = 260; // ~image width + gap
-    const interval = setInterval(() => {
-      if (!container) return;
-
-      // Smooth scroll to next image
-      scrollAmount += scrollStep;
-      if (scrollAmount >= container.scrollWidth - container.clientWidth) {
-        scrollAmount = 0;
-        container.scrollTo({ left: 0, behavior: "smooth" });
-      } else {
-        container.scrollTo({ left: scrollAmount, behavior: "smooth" });
-      }
-    }, 2500); // scroll every 2.5s
-
-    return () => clearInterval(interval);
-  }, [direction]);
-
   if (direction === "horizontal") {
+    // Mobile version: horizontal scroll
     const allImages = [...leftImages, ...rightImages];
     return (
-      <div
-        className="carousel-wrapper horizontal-carousel-wrapper"
-        ref={scrollRef}
-      >
+      <div className="carousel-wrapper horizontal-carousel-wrapper">
         {allImages.map((img, index) => (
           <div
             key={`horiz-${index}`}
@@ -57,9 +31,10 @@ const VerticalCarousel = ({ direction = "vertical" }) => {
     );
   }
 
-  // Default vertical carousel
+  // Desktop version: two-column vertical scroll
   return (
     <div className="carousel-wrapper">
+      {/* Left Column */}
       <div className="carousel-mask left-mask">
         <div className="carousel-track scroll-down">
           {[...leftImages, ...leftImages].map((img, index) => (
@@ -71,6 +46,8 @@ const VerticalCarousel = ({ direction = "vertical" }) => {
           ))}
         </div>
       </div>
+
+      {/* Right Column */}
       <div className="carousel-mask right-mask">
         <div className="carousel-track scroll-up">
           {[...rightImages, ...rightImages].map((img, index) => (

@@ -82,7 +82,6 @@
   padding: 16px 0;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
-  margin-top: 175px;
 }
 
 .horizontal-image {

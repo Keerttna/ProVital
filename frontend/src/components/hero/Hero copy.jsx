@@ -13,11 +13,7 @@ const Hero = () => {
 
         <div className="hero-flex-wrapper">
           <div className="hero-flex">
-            {/* Desktop-only carousel */}
-            <div className="desktop-carousel">
-              <VerticalCarousel />
-            </div>
-
+            <VerticalCarousel />
             <div className="hero-content">
               <p className="main-txt">
                 Book an appointment with <br />
@@ -36,12 +32,8 @@ const Hero = () => {
 
       <Searchbar />
       <div className="gradient-separator" />
-
-      {/* Mobile-only horizontal carousel */}
-      <div className="mobile-carousel">
-        <VerticalCarousel direction="horizontal" />
-      </div>
     </header>
+    
   );
 };
 
