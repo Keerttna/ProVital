@@ -1,6 +1,7 @@
 import React from "react";
 import "./Hero.css";
 import Navbar from "../navbar/Navbar";
+import Searchbar from "../searchbar/Searchbar";
 
 const Hero = () => {
   return (
@@ -24,6 +25,8 @@ const Hero = () => {
           </div>
         </div>
       </div>
+
+      <Searchbar />
     </header>
   );
 };
