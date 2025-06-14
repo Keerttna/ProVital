@@ -10,6 +10,13 @@ import substanceImg from "../../assets/lifestyle-section/substance.png";
 import leftArr from "../../assets/lifestyle-section/left-arrow.svg";
 import rightArr from "../../assets/lifestyle-section/right-arrow.svg";
 
+import nutritionIcon from "../../assets/lifestyle-section/card-icons/nutrition.svg";
+import physicalIcon from "../../assets/lifestyle-section/card-icons/physical.svg";
+import sleepIcon from "../../assets/lifestyle-section/card-icons/sleep.svg";
+import stressIcon from "../../assets/lifestyle-section/card-icons/stress.svg";
+import socialIcon from "../../assets/lifestyle-section/card-icons/social.svg";
+import substanceIcon from "../../assets/lifestyle-section/card-icons/substance.svg";
+
 const labels = [
   "Nutrition",
   "Physical activity",
@@ -17,6 +24,24 @@ const labels = [
   "Stress management",
   "Social connection",
   "Substances abuse",
+];
+
+const labelIcon = [
+  nutritionIcon,
+  physicalIcon,
+  sleepIcon,
+  stressIcon,
+  socialIcon,
+  substanceIcon,
+];
+
+const labelText = [
+  "121/80 mmHg",
+  "32 minutes",
+  "8 hours",
+  "60 bpm",
+  "Feeling better",
+  "62 days",
 ];
 
 const content = [
@@ -65,24 +90,22 @@ const Lifestyle = () => {
     setActiveIndex(index);
   };
 
-const handlePrev = () => {
-  const newIndex = activeIndex === 0 ? content.length - 1 : activeIndex - 1;
-  scrollToIndex(newIndex);
-};
+  const handlePrev = () => {
+    const newIndex = activeIndex === 0 ? content.length - 1 : activeIndex - 1;
+    scrollToIndex(newIndex);
+  };
 
-const handleNext = () => {
-  const newIndex = activeIndex === content.length - 1 ? 0 : activeIndex + 1;
-  scrollToIndex(newIndex);
-};
-
+  const handleNext = () => {
+    const newIndex = activeIndex === content.length - 1 ? 0 : activeIndex + 1;
+    scrollToIndex(newIndex);
+  };
 
   return (
     <section className="lifestyle-section">
       <div className="gradient-box"></div>
-      
+
       <h3 className="section-label">HOW IT WORKS</h3>
       <div className="section-header">
-        
         <h2>
           <span>Lifestyle as medicine:</span> The six pillars
         </h2>
@@ -117,7 +140,20 @@ const handleNext = () => {
                 alt={labels[index]}
                 className="card-image"
               />
-              <div className="card-label">{labels[index]}</div>
+              <div className="card-label">
+                {(() => {
+                  const words = labelText[index].split(" ");
+                  return (
+                    <>
+                      <img src={labelIcon[index]} alt={labels[index]} />
+                      {words[0]}{" "}
+                      <span className="label-highlight">
+                        {words.slice(1).join(" ")}
+                      </span>
+                    </>
+                  );
+                })()}
+              </div>
             </div>
             <div className="card-text">
               <h4>{labels[index]}</h4>
