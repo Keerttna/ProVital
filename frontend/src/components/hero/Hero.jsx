@@ -31,7 +31,9 @@ const Hero = () => {
       </div>
 
       <Searchbar />
+      <div className="gradient-separator" />
     </header>
+    
   );
 };
 

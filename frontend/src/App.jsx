@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import Hero from "./components/hero/hero";
+import Hero from "./components/hero/Hero";
 import Lifestyle from "./components/lifestyle/Lifestyle";
 
 const App = () => {
