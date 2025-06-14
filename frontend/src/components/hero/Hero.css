@@ -16,7 +16,27 @@ header .gradient-box-1 {
 header .wrapper {
   position: relative;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
+
+.hero-flex-wrapper {
+  height: calc(100vh - 92px); 
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+}
+
+
+.hero-flex {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 60px;
+  margin-bottom: auto; 
+}
+
 
 .wrapper .gradient-box-2 {
   position: absolute;
@@ -24,18 +44,15 @@ header .wrapper {
   height: 313px;
   left: 347px;
   top: 301px;
-
   background: rgba(251, 241, 220, 0.96);
   filter: blur(75px);
+  z-index: -2;
 }
 
 header .hero-content {
-  position: relative;
-  top: 104px;
-  left: 650px;
   width: 599px;
-  height: 104px;
   font-style: normal;
+  margin-top: 6rem;
 }
 
 .main-txt {
@@ -58,10 +75,8 @@ header .hero-content {
 }
 
 .sub-txt {
-  width: 630px;
-  height: 32px;
-  top: 342px;
-  left: 650px;
+  width: 100%;
+  margin-top: 20px;
 }
 
 .sub-txt p {
