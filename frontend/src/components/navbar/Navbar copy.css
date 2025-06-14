@@ -1,0 +1,277 @@
+nav {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1280px;
+  height: auto;
+  border-bottom: 1px solid #eaeaea;
+  background: #ffffff;
+  padding: 16px 24px;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 1139px;
+  width: 100%;
+  padding-right: 8px;
+}
+
+.nav-wrapper a {
+  height: 40px;
+}
+
+.nav-wrapper .logo {
+  display: flex;
+  align-items: center;
+  gap: 8px; 
+  padding-left: 0;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #000;
+  text-decoration: none;
+  width: auto;
+  height: auto;
+}
+
+.nav-wrapper .logo img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  position: static; 
+  box-shadow: 0px 3.45px 25.88px 0px #00000017;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 106px;
+  padding: 8px 0;
+  margin-left: auto;
+  margin-right: 0;
+  transform: translateX(-12px);
+}
+
+.nav-links ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 16px;
+}
+
+.nav-links li {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 36px;
+  text-align: center;
+  color: #707070;
+  position: relative;
+}
+
+.nav-links li::after {
+  content: "|";
+  display: inline-block;
+  margin-left: 8px;
+  color: #d0d0d0;
+}
+
+.nav-links li:last-child::after {
+  content: "";
+}
+
+.nav-links li a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.hamburger img {
+  width: 24px;
+  height: 24px;
+}
+
+.arrow {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+
+  .hamburger {
+    display: block;
+    position: absolute;
+    right: 24px;
+    top: 24px;
+  }
+
+  .hamburger img {
+    width: 12px;
+    height: 12px;
+  }
+
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    padding: 16px 0;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  .nav-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .nav-links li {
+    width: 100%;
+    border-top: 1px solid #eaeaea;
+    color: #000000;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-links li a {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-decoration: none;
+    padding: 12px 20px;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-links li::after {
+    content: "";
+  }
+
+  .arrow {
+    display: inline-block;
+    margin-left: 12px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #000;
+  }
+
+  .login-link {
+    display: none;
+  }
+}
+
+.auth-table {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+  padding: 0 12px;
+  align-items: center;
+}
+
+.auth-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border:  1px solid #eaeaea;
+  /* padding: 8px 12px; */
+  font-size: 16px;
+  font-weight: 500;
+  color: #000000;
+  background: #fdfdfd;
+}
+
+.auth-row .role {
+  flex: 1;
+}
+
+.auth-link {
+  text-decoration: underline;
+  color: #007bff;
+  margin-left: 12px;
+  font-weight: 400;
+}
+
+
+@media (min-width: 1025px) {
+  .login-link {
+    position: relative;
+    cursor: pointer;
+  }
+
+  .auth-table.desktop {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #ffffff;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 8px 16px;
+    width: 280px;
+    z-index: 10;
+  }
+
+  .auth-table.desktop .auth-row {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 8px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+    gap: 16px;
+  }
+
+  .auth-table.desktop .auth-row:last-child {
+    border-bottom: none;
+  }
+
+  .auth-table.desktop .role {
+    padding-left: 8px;
+    font-weight: 500;
+    font-size: 15px;
+    color: #000;
+  }
+
+  .auth-table.desktop .auth-link {
+    margin-left: 12px;
+    color: #007bff;
+    font-size: 14px;
+    text-decoration: underline;
+  }
+
+  .arrow-down {
+    margin-left: 6px;
+    font-size: 12px;
+  }
+}

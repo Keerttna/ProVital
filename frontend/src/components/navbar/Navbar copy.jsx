@@ -48,25 +48,19 @@ const Navbar = () => {
         </button>
 
         <div className={`nav-links ${menuOpen ? "open" : ""}`}>
+          {/* Mobile Auth Table */}
           {!isDesktop && menuOpen && (
-            <div className="auth-table mobile">
+            <div className="auth-card mobile">
               <div className="auth-row">
                 <span className="role">Doctor</span>
-                <a href="#" className="auth-link">
-                  Login
-                </a>
-                <a href="#" className="auth-link">
-                  Sign up
-                </a>
+                <a href="#" className="auth-link">Login</a>
+                <a href="#" className="auth-link">Sign up</a>
               </div>
+              {/* <hr className="divider" /> */}
               <div className="auth-row">
                 <span className="role">Patients</span>
-                <a href="#" className="auth-link">
-                  Login
-                </a>
-                <a href="#" className="auth-link">
-                  Sign up
-                </a>
+                <a href="#" className="auth-link">Login</a>
+                <a href="#" className="auth-link">Sign up</a>
               </div>
             </div>
           )}
@@ -103,32 +97,26 @@ const Navbar = () => {
               </a>
             </li>
 
+            {/* Desktop Auth Table */}
             {isDesktop && (
               <li className="login-link" onClick={handleLoginClick}>
                 <a href="#">
                   Login / Signup <img className="arrow" src={rightArrow} alt="→" />
-                  <img className="arrow-down" src={dropArrow} alt="▼"></img>
+                  <img className="arrow-down" src={dropArrow} alt="▼" />
                 </a>
 
                 {showAuthTable && (
-                  <div className="auth-table desktop">
+                  <div className="auth-card desktop">
                     <div className="auth-row">
                       <span className="role">Doctor</span>
-                      <a href="#" className="auth-link">
-                        Login
-                      </a>
-                      <a href="#" className="auth-link">
-                        Sign up
-                      </a>
+                      <a href="#" className="auth-link">Login</a>
+                      <a href="#" className="auth-link">Sign up</a>
                     </div>
+                    {/* <hr className="divider" /> */}
                     <div className="auth-row">
                       <span className="role">Patients</span>
-                      <a href="#" className="auth-link">
-                        Login
-                      </a>
-                      <a href="#" className="auth-link">
-                        Sign up
-                      </a>
+                      <a href="#" className="auth-link">Login</a>
+                      <a href="#" className="auth-link">Sign up</a>
                     </div>
                   </div>
                 )}
