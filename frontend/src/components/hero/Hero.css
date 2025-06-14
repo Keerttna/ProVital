@@ -1,6 +1,7 @@
 header {
   min-height: 100vh;
   margin: 0;
+  padding-bottom: 40px;
 }
 
 header .gradient-box-1 {
@@ -85,4 +86,16 @@ header .hero-content {
   line-height: 32px;
   letter-spacing: -0.01em;
   color: #707070;
+}
+
+.gradient-separator {
+  top: 2.5rem;
+  position: relative;
+  height: 38px;
+  width: 120%;
+  left: -10%;
+  background: linear-gradient(282.8deg, #f0c971 11.7%, #e5688c 63.17%);
+  transform: rotate(177.73deg); 
+  transform-origin: center;
+  z-index: 2;
 }
