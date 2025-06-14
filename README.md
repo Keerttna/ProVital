@@ -5,9 +5,9 @@ This repository contains a React-based web application developed as part of the 
 
 ## 📸 Demo
 
-![Demo](./assets/demo.gif)
+![Demo](./frontend/src/assets/demo.gif)
 
-![Link](https://drive.google.com/file/d/14NPUVvUNK1KTioCXpKYbV3pM-_10Pj1t/view?usp=sharing)
+[Link](https://drive.google.com/file/d/14NPUVvUNK1KTioCXpKYbV3pM-_10Pj1t/view?usp=sharing)
 
 # Getting Started
 
